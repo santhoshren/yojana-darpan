@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Tiro+Devanagari+Hindi&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --saffron: #E87722;
+  --forest: #1A6B3A;
+  --ivory: #FAF8F3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: #FAF8F3;
+  color: #1C1C1E;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #E87722; border-radius: 3px; }
+
+/* Scheme card hover */
+.scheme-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.scheme-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Category tile hover */
+.cat-tile {
+  transition: all 0.2s ease;
+}
+.cat-tile:hover {
+  border-color: #E87722 !important;
+  background: #FFF7ED;
+}
+
+/* Animated counter */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.count-animate {
+  animation: countUp 0.6s ease forwards;
+}
+
+/* Step connector */
+.step-connector::after {
+  content: '→';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #E87722;
+  font-size: 20px;
+}
+
+/* Chip active */
+.chip-active {
+  background: #E87722 !important;
+  color: white !important;
+  border-color: #E87722 !important;
+}
+
+/* Progress bar */
+.progress-bar {
+  transition: width 0.4s ease;
+}
+
+/* AdSense responsive */
+.adsbygoogle {
+  display: block;
+}
